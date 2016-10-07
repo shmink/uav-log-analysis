@@ -14,6 +14,8 @@ Johnson's excellent Java implementation. I arranged to have it ported
 because I am far more adept with Python and wanted something that I could
 extend to support newer file formats.
 
+The amount of superb work that Rowland did to create DatCon is amazing.
+
 DatCon converts the a .DAT file from a DJI Phantom 3 or Inspire1 into a .csv
 file that can be used for further analysis.
 
