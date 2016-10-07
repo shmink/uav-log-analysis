@@ -1,0 +1,72 @@
+Overview:
+
+This is intended to be a collection of tools for parsing and analyzing log
+files from UAVs and other autonomous or semi-autonomous devices. The tools
+should be standalone and appropriate for forensic or other analysis related
+to legal issues. In other words, it is expected that the tools be well 
+designed, developed, and available for review and use by all interested
+parties.
+
+Tools:
+
+The first tool in the collection is DatCon. This is a port of Rowland
+Johnson's excellent Java implementation. I arranged to have it ported 
+because I am far more adept with Python and wanted something that I could
+extend to support newer file formats.
+
+DatCon converts the a .DAT file from a DJI Phantom 3 or Inspire1 into a .csv
+file that can be used for further analysis.
+
+Retrieving the DAT file:
+
+The instructions for doing so are on the original site:
+
+	https://datfile.net/retrieve.html
+
+Retrieving a .DAT from the P3 or Inspire
+
+Windows PC
+1. Go to the DJI GO App and connect to the P3 or Inspire
+2. MC Settings --> select Advanced Settings Advanced Settings --> Enter flight data mode
+3. wait until you get a dialog telling you that the P3 or Inspire is in flight data mode.
+4. Connect a USB cable from the USB plug in the nose of the P3 or Inspire to your computer. This is not the USB connector on the side of the camera. Your P3 or Inspire should have come with the required USB cable
+5. The data drive should mount and be available.
+6. Use the date on the FLYXXX.DAT files to pick the one you want and copy it to your computer
+
+Mac OSX
+
+Replace step 5 above with one of the following:
+Using Disk Utility, select the SD card and create a Disk Image of the entire
+Phantom SD card saving it to the hard drive. To do this, select the SD Card,
+then File>New Image>Image from Folder. Save the file to desktop. 
+
+After it has completed open the Disk Image as any other folder and save the
+enclosed .DAT files to a new folder for viewing. 
+
+Depending on how many .DAT files (flights) there are, it can take a long time
+to create the rather sizable disk image of the entire SD card. (The Phantom
+battery can often get run down in the process. Start with the battery at least
+50% charged).
+
+Use the Disk Utility app as described here (Courtesy of Greq Dominguez)
+Picking the right .DAT
+
+The .DAT for a flight starts recording when the battery is turned on and ends
+recording when the battery is turned off or removed. The .DAT will also stop
+recording if the AC is put into MC Data Mode by the Go App. Thus, an "extra"
+.DAT file is created when you are attempting to retrieve the .DAT you want.
+
+Each .DAT has a DateTime and usually this can be used to determine the desired
+.DAT file. However, the DateTime comes from the RC. If the battery is turned on
+while the RC is not powered up the DateTime is set to the DateTime of the last
+.DAT. The result is two .DAT files with the same DateTime. Also, if the .DAT
+reaches a size around 300 MBytes the AC will end the .DAT and start a new .DAT.
+This new .DAT will have the same DateTime as the first .DAT.
+
+The size of the .DAT can be used to estimate the length of the time the battery
+was on. The ratio is .19 MBytes/second. Be aware that the battery will be on
+longer than the length of the flight.
+
+Another method of determining if you have the right .DAT is to use DatCon to
+generate a .kml file that can be viewed with Google Earth.
+
