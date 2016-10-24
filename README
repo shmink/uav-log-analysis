@@ -8,6 +8,10 @@ designed, developed, and available for review and use by all interested
 parties. Further, the tools are designed to run on a local system so as to
 avoid placing potential evidence in an uncontrolled cloud environment.
 
+These tools are an adjunct to an ongoing series of presentations I and
+others are doing on UAV forensics. Please contact me for a copy of the
+latest version of the presentation.
+
 Tools:
 
 The first tool in the collection is DatCon. This is a port of Rowland
