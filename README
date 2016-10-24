@@ -5,7 +5,8 @@ files from UAVs and other autonomous or semi-autonomous devices. The tools
 should be standalone and appropriate for forensic or other analysis related
 to legal issues. In other words, it is expected that the tools be well 
 designed, developed, and available for review and use by all interested
-parties.
+parties. Further, the tools are designed to run on a local system so as to
+avoid placing potential evidence in an uncontrolled cloud environment.
 
 Tools:
 
