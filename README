@@ -24,6 +24,10 @@ The amount of superb work that Rowland did to create DatCon is amazing.
 DatCon converts the a .DAT file from a DJI Phantom 3 or Inspire1 into a .csv
 file that can be used for further analysis.
 
+Additional modules required:
+
+1) You also need the bitstring module to run this tool. 
+
 Retrieving the DAT file:
 
 The instructions for doing so are on the original site:
