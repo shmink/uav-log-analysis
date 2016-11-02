@@ -26,7 +26,8 @@ file that can be used for further analysis.
 
 Additional modules required:
 
-1) You also need the bitstring module to run this tool. 
+* You also need the `bitstring` module to run this tool.
+* For Linux users there is an install script. Run ./Linux-Install.sh for quick setup. 
 
 Retrieving the DAT file:
 
